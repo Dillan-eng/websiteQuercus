@@ -1,0 +1,770 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    text-decoration: none; 
+
+}
+html{
+    scroll-behavior: smooth;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+/*navbar styling*/  
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 15px 0;
+    font-family:  'times', Arial, sans-serif;
+    /*background: #000000   ;*/
+    transition: all 0.3s ease;
+}
+.navbar.sticky {
+    padding: 10px 0;
+    background:#BF360C ;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a {
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span {
+    color: #BF360C;
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+
+}
+.navbar .menu li a:hover{
+    color: #BF360C;
+}
+.navbar.sticky .menu li a:hover{ 
+    color: #fff;
+
+}
+/*Menu byn stylling*/
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #BF360C;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+}
+
+
+/*home section styling*/
+.home{
+    display: flex;
+    background: url("imagenes/Fondo2.jpg") no-repeat center;
+    background-color: rgb(80,100,100);
+    background-blend-mode: soft-light;
+    background-size:cover;
+    height: 100vh;
+    color: #ffffff;
+    min-height: 500px;
+    font-family: sans-serif, 
+}
+
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+
+}
+.home .home-content .text-3 span {
+    color: #BF360C ;
+    font-weight: 700;
+}
+.quienesSomos .quienesSomos-content .column{
+    width: 50%;
+
+}
+
+/*quienesSomos section stylling*/
+section{
+    padding: 100px 0;
+}
+
+.quienesSomos{
+    font-family: 'Times New Roman', Times, serif;
+}
+.quienesSomos .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom:20px ;
+    font-family: 'Times New Roman', Times, serif;
+}
+.quienesSomos .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 250px;
+    height: 3px;
+    background: #111111;
+    transform: translateX(-50%);
+}
+
+.quienesSomos .title::after{
+    content: "Nosotros";
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    font-size: 20px;
+    color: #BF360C;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+
+.quienesSomos .quienesSomos-content,
+.contacto .contacto-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quienesSomos .quienesSomos-content .left{
+    width: 45%;
+}
+
+.quienesSomos .quienesSomos-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.quienesSomos .quienesSomos-content .rigth{
+    width: 55%;
+} 
+.quienesSomos .quienesSomos-content .rigth .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.quienesSomos .quienesSomos-content .rigth .text span{
+    color: #BF360C;
+}
+.quienesSomos .quienesSomos-content .rigth p{
+    text-align: justify;
+}
+
+/* proyectos section styling*/
+section{
+    padding: 100px 0;
+}
+
+.proyectos{
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+    background: #111111;
+}
+.proyectos .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom:20px ;
+    font-family: 'Times New Roman', Times, serif;
+}
+.proyectos .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 250px;
+    height: 3px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.proyectos .title::after{
+    content: "Lo que hemos hecho";
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    font-size: 20px;
+    color: #BF360C;
+    padding: 5px;
+    background: #111111;
+    transform: translateX(-50%);
+}
+.proyectos .carousel .card {
+    background: none;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.proyectos .carousel .card:hover{
+    background: #111;
+
+}
+.proyectos .carousel .card .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.proyectos .carousel .card:hover .box{
+    transform: scale(1.2);
+}
+.proyectos .carousel .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+
+
+    
+
+.proyectos .carousel .boton a{
+    
+    color: #fff;
+
+}
+
+.proyectos .carousel .boton{
+    height: 35px;
+    width: 145px;
+    border: 2px solid #BF360C;
+    background: #BF360C;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    font-family: 'Times New Roman', Times, serif;
+    transition: all 0.3s ease;
+    
+}
+
+.proyectos .carousel .boton:hover {
+    background:#111;
+    color: #fff;
+
+}
+
+
+
+
+
+
+
+.proyectos .carousel a{
+    font-size: 15px;
+    color: #111;
+   
+}
+
+
+.proyectos .carousel .card img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #BF360C;
+    transition: all 0.3s ease;
+}
+.proyectos .carousel .card:hover img {
+    border-color: #fff;
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid #BF360C!important;
+    transition: all 0.3s ease;
+}
+.owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover {
+    background: #BF360C!important;
+}
+
+/* equipo section styling */
+
+section{
+    padding: 100px 0;
+}
+
+.equipo{
+    font-family: 'Times New Roman', Times, serif;
+    color: #111111;
+    background: #fff;
+}
+.equipo .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom:20px ;
+    font-family: 'Times New Roman', Times, serif;
+}
+.equipo .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 250px;
+    height: 3px;
+    background: #111111;
+    transform: translateX(-50%);
+}
+
+.equipo .title::after{
+    content: "Nuestros integrantes";
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    font-size: 20px;
+    color: #BF360C;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+.equipo .carousel .card {
+    color: #fff;
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.equipo .carousel .card:hover{
+    background: url(imagenes/cover1.jpg) no-repeat center;
+    background-color: rgb(80,100,100);
+    background-blend-mode: soft-light;
+    background-size: cover;
+    ;
+
+
+}
+.equipo .carousel .card .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.equipo .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+.equipo .carousel .card .text{
+    color: #111;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.equipo .carousel .card img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #BF360C;
+    transition: all 0.3s ease;
+}
+.equipo .carousel .card:hover img {
+    border-color: #fff;
+    
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid #BF360C!important;
+    transition: all 0.3s ease;
+}
+.owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover {
+    background: #BF360C!important;
+}
+
+/*Contact section styling*/
+
+section{
+    padding: 100px 0;
+}
+
+.contacto{
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+    background: #111;
+}
+.contacto .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom:20px ;
+    font-family: 'Times New Roman', Times, serif;
+}
+.contacto .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 250px;
+    height: 3px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.contacto .title::after{
+    content: "A través de un mensaje";
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    font-size: 20px;
+    color: #BF360C;
+    padding: 5px;
+    background: #111111;
+    transform: translateX(-50%);
+
+}
+.contacto{
+    font-family: 'Times New Roman', Times, serif;
+}
+.contacto .contacto-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.contacto .contacto-content .column {
+    width: calc(50% - 30px);
+}
+.contacto .contacto-content .text{
+    font-size: 20px;
+    font-weight: 600 ;
+    margin-bottom: 10px;
+}
+.contacto .contacto-content .left p{
+    text-align: justify;
+
+}
+.contacto .contacto-content .left .icons{
+    margin: 10px 0;
+}
+.contacto .contacto-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contacto .contacto-content .row .info{
+    margin-left: 30px;
+}
+.contacto .contacto-content .row i {
+    font-size: 50px;
+    color: #BF360C;
+}
+.contacto .contacto-content .info .head{
+    font-weight: 500;
+}
+.contacto .contacto-content .info .sub-title{
+    color: #555;
+}
+.contacto .rigth form .fields{
+    display: flex;
+}
+.contacto .rigth form .field,
+.contacto .rigth form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contacto .rigth form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contacto .rigth form .name{
+    margin-right: 10px;
+}
+.contacto .rigth form .email{
+    margin-left : 10px;
+}
+.contacto .rigth form .field input,
+.contacto .rigth form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+
+} 
+.contacto .rigth form .textarea textarea{
+    padding: 10px;
+    resize: none;
+}
+.contacto .rigth form .buttom{
+    height: 47px;
+    width: 170px;
+}
+.contacto .rigth form .buttom button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #BF360C;
+    background: #BF360C;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.contacto .rigth form .buttom button:hover{
+    color: #BF360C;
+    background: none;
+}
+.fa {
+    padding: 0 10px;
+    font-weight: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: #BF360C;
+    border: 2px solid #BF360C;
+    
+  }
+.fa:hover{
+    color: #BF360C;
+    background: none;
+}
+.fa-facebook{
+    background: #BF360C;
+    color: #fff;
+    padding: 30px 0;
+    border-radius: 6px;
+}
+.fa-twitter{
+    background: #BF360C;
+    color: #fff;
+    padding: 30px 0;
+    border-radius: 6px;
+}
+.fa-instagram{
+    background: #BF360C;
+    color: #fff;
+    padding: 30px 0;
+    border-radius: 6px;
+}
+
+/*footer section stylling*/
+footer{
+    background: #fff;
+    padding: 20px 23px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #111;
+    margin-right: auto;
+    text-align: center;
+}
+footer span a{
+    color: #BF360C;
+    text-decoration: none;
+
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
+
+
+/*responsive media query start */
+@media (max-width:1300px) {
+    .home .max-width {
+        margin-left: 0px;
+    }
+
+}
+@media (max-width:1104px) {
+    .quienesSomos .quienesSomos-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+
+}
+
+@media (max-width:991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+
+}
+@media (max-width:947px){
+    .max-width { 
+        padding: 0 50px;
+    }
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+
+    }
+
+    .navbar .menu.active{
+        left:0%;
+    }
+    .navbar .menu li{
+        display:block;
+    }
+    .navbar .menu li a{
+        display:inline-block;
+        margin: 20px;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    
+    .max-width{
+        max-width: 800px;
+
+    }
+    .quienesSomos .quienesSomos-content .column{
+        width: 50%;
+    }
+    .quienesSomos .quienesSomos-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .quienesSomos .quienesSomos-content .rigth{
+        flex: 100%;
+    }
+    .proyectos .proyectos-content{
+        width: 50%;
+    }
+    .contacto .contacto-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+    
+}
+@media (max-width:690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+
+}
+@media (max-width:500px) {
+   
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+
+}
